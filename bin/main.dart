@@ -1,6 +1,7 @@
 import 'package:DartDemo/DartDemo.dart' as DartDemo;
 import 'package:DartDemo/VariablesDemo.dart' as VariablesDemo;
 import 'package:DartDemo/FunctionsDemo.dart' as FunctionsDemo;
+import 'package:DartDemo/TypeCastingDemo.dart' as TypeCastingDemo;
 
 main(List<String> arguments) {
   print('Hello world, from ${DartDemo.fromLanguage()}');
@@ -34,4 +35,5 @@ main(List<String> arguments) {
   print(FunctionsDemo.willDecideReturnTypeDynamically("hello"));
 
   /* ==part 3== */
+  TypeCastingDemo.doTypeCast();
 }
