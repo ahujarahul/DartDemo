@@ -2,6 +2,7 @@ import 'package:DartDemo/DartDemo.dart' as DartDemo;
 import 'package:DartDemo/VariablesDemo.dart' as VariablesDemo;
 import 'package:DartDemo/FunctionsDemo.dart' as FunctionsDemo;
 import 'package:DartDemo/TypeCastingDemo.dart' as TypeCastingDemo;
+import 'package:DartDemo/ExceptionHandlingDemo.dart' as ExceptionHandlingDemo;
 
 main(List<String> arguments) {
   print('Hello world, from ${DartDemo.fromLanguage()}');
@@ -36,4 +37,15 @@ main(List<String> arguments) {
 
   /* ==part 3== */
   TypeCastingDemo.doTypeCast();
+
+  /* ==part 4== */
+  ExceptionHandlingDemo.demonstrateExceptionHandling();
+
+  try {
+    print(ExceptionHandlingDemo.calculateSquareRoot(0));
+  } on FormatException catch(exception) {
+    print("Calculating square root --> ${exception.message}");
+  }
+
+  print("Calculating square root --> ${ExceptionHandlingDemo.calculateSquareRoot(4)}");
 }
