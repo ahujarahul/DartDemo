@@ -1,5 +1,5 @@
 showMeVariablesDemo(){
-  /**
+  /*
    * Dart supports built-in data types:
    * numbers
    * doubles
@@ -8,6 +8,7 @@ showMeVariablesDemo(){
    * lists (arrays)
    * maps
    * */
+
   print("====================================================================");
   /**
    * read answer from - Mahendran Sakkarai
@@ -98,8 +99,19 @@ showMeVariablesDemo(){
   List animalList = ["monkey", "gorilla", "lion"];
   print("list contents :: $animalList\n");
 
-  animalList.forEach((f) {
-    print(f);
+  /*
+   * Below for each takes a anonymous function as a parameter, which takes
+   * Object (String in this case) of list as a parameter and returns void.
+   * Internally, it is as below:
+   *
+   * void anonymousFunc(String data) {
+   *    //we define body of the function. Here we are just printing
+   * }
+   *
+   * This is called as function as an object
+   * */
+  animalList.forEach((data) {
+    print(data);
   });
 
   print("\nlist contains lion? :: ${animalList.contains("lion")}");
@@ -130,8 +142,9 @@ showMeVariablesDemo(){
   print("${personDetails[personDetails.keys.elementAt(0)]}");
   print("${personDetails["Roy"]}");
 
-  personDetails.forEach((k,v){
-    print("$k is $v years old");
+  //read working of above forEach() to understand below syntax
+  personDetails.forEach((key,value){
+    print("$key is $value years old");
   });
 
   print("====================================================================");
